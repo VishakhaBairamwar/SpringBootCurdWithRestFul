@@ -16,7 +16,7 @@ public class EmployeeDaoIMPL implements EmployeeDaoI{
 	private SessionFactory sf;
 
 	@Override
-	public int saveUserDao(Employee emp) {
+	public int saveEmployeeDao(Employee emp) {
 		Session session=sf.openSession();
 		session.beginTransaction();
 		int id=(int)session.save(emp);
@@ -26,7 +26,7 @@ public class EmployeeDaoIMPL implements EmployeeDaoI{
 	}
 
 	@Override
-	public List<Employee> getAllUserDao() {
+	public List<Employee> getAllEmployeeDao() {
 		Session session=sf.openSession();
 		String hql="from User";
 	  Query query = session.createQuery(hql);
@@ -63,5 +63,4 @@ public class EmployeeDaoIMPL implements EmployeeDaoI{
 		session.getTransaction().commit();
 
 	}
-
 }

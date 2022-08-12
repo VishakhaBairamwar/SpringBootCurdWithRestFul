@@ -7,13 +7,15 @@ import com.BikkadIT.model.Employee;
 
 public interface EmployeeDaoI {
 	
-	public int saveUserDao(Employee emp);
+	public int saveEmployeeDao(Employee emp);
 
-	public List<Employee> getAllUserDao();
+	public List<Employee> getAllEmployeeDao();
 
 	public Employee update(Employee emp);
 
 	public void deleteAllEmployee();
+
+	
 
 	
 
