@@ -28,7 +28,7 @@ public class EmployeeDaoIMPL implements EmployeeDaoI{
 	@Override
 	public List<Employee> getAllEmployeeDao() {
 		Session session=sf.openSession();
-		String hql="from User";
+		String hql="from Employee";
 	  Query query = session.createQuery(hql);
 	  List list = query.getResultList();
 	  
@@ -46,7 +46,7 @@ public class EmployeeDaoIMPL implements EmployeeDaoI{
 		session.close();
 		
 		Session session2=sf.openSession();
-	 Employee employee = session2.get(Employee.class,emp.getEmpId());
+	  Employee employee = session2.get(Employee.class, emp.getEmpId());
 		session2.close();
 		
 		return employee;
@@ -56,9 +56,7 @@ public class EmployeeDaoIMPL implements EmployeeDaoI{
 	public void deleteAllEmployee(){
 		Session session=sf.openSession();
 		session.beginTransaction();
-		String hql="delete all from Employee";
-		Query query = session.createQuery(hql);
-		session.beginTransaction();
+       Query query = session.createQuery("delete from Employee");
 		query.executeUpdate();
 		session.getTransaction().commit();
 

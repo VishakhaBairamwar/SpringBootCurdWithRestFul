@@ -10,18 +10,16 @@ public class Employee {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int empId;
+	private Integer empId;
 	private String empName;
 	private String empAddress;
 	private String empEmail;
 	private double empSalary;
 	private int empAge;
-	
-	
-	public int getEmpId() {
+	public Integer getEmpId() {
 		return empId;
 	}
-	public void setEmpId(int empId) {
+	public void setEmpId(Integer empId) {
 		this.empId = empId;
 	}
 	public String getEmpName() {
@@ -59,5 +57,6 @@ public class Employee {
 		return "Employee [empId=" + empId + ", empName=" + empName + ", empAddress=" + empAddress + ", empEmail="
 				+ empEmail + ", empSalary=" + empSalary + ", empAge=" + empAge + "]";
 	}
+	
 	
 }
